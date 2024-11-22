@@ -1,8 +1,8 @@
-name: Track Price Every 2 Minutes
+name: Track Price Every 10 Minutes
 
 on:
   schedule:
-    - cron: "*/2 * * * *"  # This cron expression schedules the workflow to run every 10 minutes
+    - cron: "*/10 * * * *"  # This cron expression schedules the workflow to run every 10 minutes
   workflow_dispatch:  # Allows manual trigger from the GitHub UI if needed
 
 jobs:
