@@ -2,22 +2,22 @@ name: Track Price Every 5 Minutes
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # This cron expression schedules the workflow to run every 10 minutes
+    - cron: "*/5 * * * *"  # This cron expression schedules the workflow to run every 5 minutes
   workflow_dispatch:  # Allows manual trigger from the GitHub UI if needed
 
 jobs:
   track-price:
-    runs-on: ubuntu-latest  # Specifies that this will run on the latest version of Ubuntu
+    runs-on: ubuntu-latest  
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2  # This checks out your repository code
+      uses: actions/checkout@v2  
 
     - name: Set up Python
       uses: actions/setup-python@v2  # This action sets up Python on the runner
 
       with:
-        python-version: '3.x'  # Use Python version 3.x
+        python-version: '3.x' 
 
     - name: Install dependencies
       run: |
