@@ -1,8 +1,8 @@
-name: Track Price Every 7 Hours
+name: Track Price Everyday
 
 on:
   schedule:
-    - cron: "0 */10 * * *"  # This cron expression schedules the workflow to run every 7 hours
+    - cron: "0 0 * * *"  # This cron expression schedules the workflow to run every 7 hours
   workflow_dispatch:  # Allows manual trigger from the GitHub UI if needed
 
 jobs:
